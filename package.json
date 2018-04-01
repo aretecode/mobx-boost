@@ -1,0 +1,25 @@
+{
+  "name": "mobx-boost",
+  "version": "0.0.1",
+  "description": "mobx, mobs-state-tree, mobx-react, mobx-react-devtools, mobx-utils, as 1 pkg",
+  "main": "lib/index.js",
+  "repository": "git@github.com:aretecode/mobx-boost.git",
+  "author": "aretecode <aretecode@gmail.com>",
+  "license": "MIT",
+  "typings": "lib/mobx-boost.d.ts",
+  "scripts": {
+    "quick-build": "tsc --pretty"
+  },
+  "dependencies": {
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
+    "mobx-react-devtools": "^5.0.1",
+    "mobx-state-tree": "^2.0.2",
+    "mobx-utils": "^4.0.0",
+    "mst-middlewares": "^2.0.2"
+  },
+  "devDependencies": {
+    "tslib": "1.9.0",
+    "typescript": "next"
+  }
+}
