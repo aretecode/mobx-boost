@@ -9,6 +9,7 @@
 
 * `mobx-state-tree` & `mobx` both export `decorate` and `flow`
 * `mobx-state-tree`'s variants are exported as `mstDecorate` & `mstFlow`
+* `mobx-react-devtools` exports `DevTools` as default, here it is exported as `DevTools`
 
 # imports
 
@@ -58,18 +59,22 @@ import {observer} from 'mobx-react'
 import {observable} from 'mobx'
 ```
 
+# exports
+
+* there is no default export, all exports are re-exported, so tree shaking will work the same way
+
 # packages
 
-* [https://github.com/mobxjs/mobx](mobx)
-* [https://github.com/mobxjs/mobx-state-tree](mobx-state-tree)
-* [https://github.com/mobxjs/mobx-state-tree/tree/master/packages/mst-middlewares](mst-middlewares)
-* [https://github.com/mobxjs/mobx-react](mobx-react)
-* [https://github.com/mobxjs/mobx-react-devtools](mobx-react-devtools)
-* [https://github.com/mobxjs/mobx-utils](mobx-utils)
+* [mobx](https://github.com/mobxjs/mobx)
+* [mobx-state-tree](https://github.com/mobxjs/mobx-state-tree)
+* [mst-middlewares](https://github.com/mobxjs/mobx-state-tree/tree/master/packages/mst-middlewares)
+* [mobx-react](https://github.com/mobxjs/mobx-react)
+* [mobx-react-devtools](https://github.com/mobxjs/mobx-react-devtools)
+* [mobx-utils](https://github.com/mobxjs/mobx-utils)
 
 # related
 
-* [https://dev-blog.apollodata.com/zero-config-graphql-state-management-27b1f1b3c2c3](apollo-boost)
+* [medium article on apollo-boost](https://dev-blog.apollodata.com/zero-config-graphql-state-management-27b1f1b3c2c3)
 
 [mobx-boost-codesandbox-image]: https://img.shields.io/badge/mobx_boost-codesandbox-ff69b4.svg?longCache=true
 [mobx-boost-codesandbox-url]: https://codesandbox.io/s/ww4y82z6kk
