@@ -1,6 +1,7 @@
 # mobx-boost
 
 [![NPM version][mobx-boost-npm-image]][mobx-boost-npm-url]
+[![codesandbox][mobx-boost-codesandbox-image]][mobx-boost-codesandbox-url]
 
 > mobx, mobs-state-tree, mobx-react, mobx-react-devtools, mobx-utils, as 1 pkg
 
@@ -14,23 +15,33 @@
 each package can be imported by using the main entry point
 
 ```ts
+import React from 'react'
+import {render} from 'react-dom'
 import {observer, observable, action, DevTools} from 'mobx-boost'
 
 const state = observer({
-  eh: undefined,
+  eh: 'default',
 })
 state.setEh = action(value => (state.eh = value))
 
 @observer
-class App {
+class Eh extends React.Component {
   state = state
   componentWillMount() {
     this.state.setEh('eh')
   }
   render() {
-    return <h1>{this.state.eh}</h1>
+    return <h1>{String(this.state.eh)}</h1>
   }
 }
+const App = () => (
+  <React.Fragment>
+    <DevTools />
+    <Eh />
+  </React.Fragment>
+)
+
+render(<App />, document.getElementById('root'))
 ```
 
 or by importing the package from the path
@@ -60,5 +71,7 @@ import {observable} from 'mobx'
 
 * [https://dev-blog.apollodata.com/zero-config-graphql-state-management-27b1f1b3c2c3](apollo-boost)
 
+[mobx-boost-codesandbox-image]: https://img.shields.io/badge/mobx_boost-codesandbox-ff69b4.svg?longCache=true
+[mobx-boost-codesandbox-url]: https://codesandbox.io/s/ww4y82z6kk
 [mobx-boost-npm-image]: https://img.shields.io/npm/v/mobx-boost.svg
 [mobx-boost-npm-url]: https://npmjs.org/package/mobx-boost

@@ -99,10 +99,10 @@ export {
   IDependencyTree,
   IComputedValueOptions,
 } from 'mobx'
-
+// deprecated from @public
+// ObservableMap,
 export {
   Reaction,
-  ObservableMap,
   untracked,
   createAtom,
   spy,
